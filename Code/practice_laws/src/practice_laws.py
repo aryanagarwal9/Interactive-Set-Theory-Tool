@@ -7,7 +7,6 @@ from practice_laws_ui import Ui_MainWindow
 import sys
 import json
 
-print(sys.version)
 
 class SetLaw:
 
