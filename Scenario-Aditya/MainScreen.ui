@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1438</width>
+    <height>806</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: rgb(255,246,233);
+}
+
+#header{
+	font: 90pt &quot;Baloo Bhaijaan&quot;;
+	background-color: rgb(73,133,168);
+	color: white;
+	border-radius: 70%;
+}
+
+QPushButton{
+	background-color: rgb(73,133,168);
+	color: white;
+	font: 25pt &quot;Verdana&quot;;
+	border-radius: 20%;
+}
+
+QPushButton:hover{
+	background-color: rgb(93,153,168);
+	border: 2px solid black;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1431</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;INTERACTIVE SET-THEORY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="practiceButton">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>360</y>
+      <width>421</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Practice Exercises</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createButton">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>620</y>
+      <width>421</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create Exercises</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
