@@ -3,15 +3,15 @@
     {
       "qno": 1,
       "law_name": "distribution law",
-      "question": "𝐴∩(𝐵∪𝐶)",
-      "answer": "(𝐴∩𝐵)∪(𝐴∩𝐶)",
+      "question": "A ∩ (B U C)",
+      "answer": "( A ∩ B) U (A ∩ C)",
       "img": null
     },
     {
       "qno": 2,
       "law_name": "distribution law",
-      "question": "𝐴∪(𝐵∩𝐶)",
-      "answer": "(𝐴∪𝐵)∩(𝐴∪𝐶)",
+      "question": "A U (B ∩ C)",
+      "answer": "(A U B) ∩ (A U C)",
       "img": null
     },
     {

@@ -7,6 +7,7 @@ from practice_laws_ui import Ui_MainWindow
 import sys
 import json
 
+print(sys.version)
 
 class SetLaw:
 
@@ -16,6 +17,7 @@ class SetLaw:
         self.answer = answer
         self.img = img
 
+
 class MainWindow(QMainWindow, Ui_MainWindow):
 
     def __init__(self):
@@ -24,8 +26,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setWindowTitle("Set Laws")
         self.connectSignalsSlots()
         self.counter = 0
-        self.set_laws = add_set_laws('practice_laws/resources/set_laws.json')
-
+        self.set_laws = add_set_laws('../resources/set_laws.json')
 
     def connectSignalsSlots(self):
         self.next_button.clicked.connect(self.next_pressed)
@@ -35,11 +36,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.update_ui(self.set_laws[i].law_name, self.set_laws[i].question, self.set_laws[i].answer, self.set_laws[i].img)
         self.counter += 1
 
-
     def update_ui(self, law_name, question, answer, img):
         _translate = QCoreApplication.translate
-        self.Question_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">According to " + law_name + " :</p><p align=\"center\"> " + question + " = ??? </p></body></html>"))
-        self.Answer_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"> " + answer + "</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"))
+
+        html_ques = "<html><head/><body><p align=\"center\">According to " + law_name + " :</p><p align=\"center\"> " + question + " = ??? </p></body></html>"
+        self.Question_label.setText(_translate("MainWindow", html_ques))
+
+        html_ans = "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"> " + answer + "</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"
+        self.Answer_label.setText(_translate("MainWindow", html_ans))
 
 
 def add_set_laws(file):
