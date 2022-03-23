@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'practiceVennDiagram.ui'
+# Form implementation generated from reading ui file 'src/ui_files/practiceVennDiagram.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(875, 695)
+        MainWindow.resize(1081, 806)
         MainWindow.setStyleSheet("QWidget{\n"
-"    background-color: rgb(255,246,233)\n"
+"    background-color: rgb(255,246,233);\n"
 "}\n"
 "\n"
 "QPushButton{\n"
@@ -35,11 +35,17 @@ class Ui_MainWindow(object):
 "    border:none;\n"
 "}\n"
 "\n"
-"QLabel{\n"
+"#Question{\n"
 "    font: Italic 22pt \"Verdana\";\n"
 "    background-color: rgb(73, 133, 168);\n"
 "    border-radius: 20%;\n"
 "    color: white;\n"
+"}\n"
+"\n"
+"QLabel{\n"
+"    background-color: white;\n"
+"    font: 50pt \"Calibri\";\n"
+"    font-weight: 900;\n"
 "}\n"
 "\n"
 "QCheckBox{\n"
@@ -56,11 +62,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked{\n"
-"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario-2/checkbox-checked.png);\n"
+"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-Aditya/Practice_VennDiagrams/ui_files/checkbox-checked.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked{\n"
-"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario-2/checkbox-unchecked.png);\n"
+"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-Aditya/Practice_VennDiagrams/ui_files/checkbox-unchecked.png);\n"
 "}\n"
 "")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -146,11 +152,20 @@ class Ui_MainWindow(object):
         self.Question.setStyleSheet("")
         self.Question.setObjectName("Question")
         self.DiagramFrame = QtWidgets.QFrame(self.centralwidget)
-        self.DiagramFrame.setGeometry(QtCore.QRect(20, 0, 721, 401))
+        self.DiagramFrame.setGeometry(QtCore.QRect(30, -10, 1401, 411))
         self.DiagramFrame.setStyleSheet("")
         self.DiagramFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.DiagramFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.DiagramFrame.setObjectName("DiagramFrame")
+        self.ResultLabel = QtWidgets.QLabel(self.DiagramFrame)
+        self.ResultLabel.setGeometry(QtCore.QRect(980, 80, 391, 241))
+        self.ResultLabel.setStyleSheet("color: rgb(58, 142, 52);")
+        self.ResultLabel.setWordWrap(True)
+        self.ResultLabel.setObjectName("ResultLabel")
+        self.Answer = QtWidgets.QLabel(self.DiagramFrame)
+        self.Answer.setGeometry(QtCore.QRect(110, 120, 411, 171))
+        self.Answer.setStyleSheet("")
+        self.Answer.setObjectName("Answer")
         self.submitButton = QtWidgets.QPushButton(self.centralwidget)
         self.submitButton.setGeometry(QtCore.QRect(1100, 790, 121, 46))
         self.submitButton.setStyleSheet("")
@@ -158,11 +173,20 @@ class Ui_MainWindow(object):
         self.nextButton = QtWidgets.QPushButton(self.centralwidget)
         self.nextButton.setGeometry(QtCore.QRect(1250, 790, 121, 46))
         self.nextButton.setObjectName("nextButton")
+        self.buttonFrame = QtWidgets.QFrame(self.centralwidget)
+        self.buttonFrame.setGeometry(QtCore.QRect(40, 780, 281, 81))
+        self.buttonFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.buttonFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.buttonFrame.setObjectName("buttonFrame")
+        self.yourAnswer = QtWidgets.QPushButton(self.buttonFrame)
+        self.yourAnswer.setGeometry(QtCore.QRect(70, 10, 151, 51))
+        self.yourAnswer.setObjectName("yourAnswer")
         self.QuestionFrame.raise_()
         self.DiagramFrame.raise_()
         self.CheckboxFrame.raise_()
         self.submitButton.raise_()
         self.nextButton.raise_()
+        self.buttonFrame.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -182,15 +206,9 @@ class Ui_MainWindow(object):
         self.Area7.setText(_translate("MainWindow", "7"))
         self.Area6.setText(_translate("MainWindow", "6"))
         self.Question.setText(_translate("MainWindow", "<html><head/><body><p>&nbsp; &nbsp; Shade the given area: (A&amp;B)</p></body></html>"))
+        self.ResultLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
+        self.Answer.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
         self.submitButton.setText(_translate("MainWindow", "Submit"))
         self.nextButton.setText(_translate("MainWindow", "Next"))
+        self.yourAnswer.setText(_translate("MainWindow", "Your Answer"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
