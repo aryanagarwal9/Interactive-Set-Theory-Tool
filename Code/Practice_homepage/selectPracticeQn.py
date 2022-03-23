@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from Practice_homepage.selectPracticeQn_ui import Ui_MainWindow
+from Code.Practice_homepage.selectPracticeQn_ui import Ui_MainWindow
 
 class MainWindow(Ui_MainWindow, QMainWindow):
     def __init__(self):
@@ -20,7 +20,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         pass
 
     def redirect_HomePage(self):
-        import Main_Screen.MainScreen as Main
+        import Code.Main_Screen.MainScreen as Main
         self.w = Main.MainWindow()
         self.w.show()
         self.hide()
