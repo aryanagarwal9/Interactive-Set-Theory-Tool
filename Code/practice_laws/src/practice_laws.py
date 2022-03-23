@@ -41,7 +41,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         html_ques = "<html><head/><body><p align=\"center\">According to " + law_name + " :</p><p align=\"center\"> " + question + " = ??? </p></body></html>"
         self.Question_label.setText(_translate("MainWindow", html_ques))
 
-        html_ans = "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"> " + answer + "</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"
+        print(answer)
+        html_ans = "<html><head/><body><p align=\"center\">" + answer + "</p></body></html>"
         self.Answer_label.setText(_translate("MainWindow", html_ans))
 
         self.Image_label.setPixmap(QPixmap("../resources/" + img))
