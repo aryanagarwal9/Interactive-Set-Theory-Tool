@@ -3,7 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from MainScreen_ui import Ui_MainWindow
 import sys
-from Practice_homepage.selectPracticeQn import MainWindow as Practice_main
+from Code.Practice_homepage.selectPracticeQn import MainWindow as Practice_main
 
 
 class MainWindow(Ui_MainWindow, QMainWindow):
@@ -11,6 +11,8 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Home Page")
+        self.setFixedWidth(1500)
+        self.setFixedHeight(800)
         self.connectSignalsSlots()
 
     def connectSignalsSlots(self):
