@@ -44,6 +44,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         html_ans = "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"> " + answer + "</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"
         self.Answer_label.setText(_translate("MainWindow", html_ans))
 
+        self.Image_label.setPixmap(QPixmap("../resources/" + img))
+
+
 
 def add_set_laws(file):
     set_laws = []

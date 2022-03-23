@@ -2,45 +2,45 @@
   "set_laws": [
     {
       "qno": 1,
-      "law_name": "distribution law",
+      "law_name": "distributive law",
       "question": "A ∩ (B U C)",
       "answer": "( A ∩ B) U (A ∩ C)",
-      "img": null
+      "img": "Distributive2.png"
     },
     {
       "qno": 2,
-      "law_name": "distribution law",
+      "law_name": "distributive law",
       "question": "A U (B ∩ C)",
       "answer": "(A U B) ∩ (A U C)",
-      "img": null
+      "img": "Distributive1.png"
     },
     {
       "qno": 3,
       "law_name": "associative law",
       "question": "(A U B) U C",
       "answer": "A U (B U C)",
-      "img": null
+      "img": "Associative1.png"
     },
     {
       "qno": 4,
       "law_name": "associative law",
       "question": "(A ∩ B) ∩ C",
       "answer": "A ∩ (B ∩ C)",
-      "img": null
+      "img": "Associative2.png"
     },
     {
       "qno": 5,
       "law_name": "de-morgan law",
       "question": "(A U B)’",
       "answer": "A' ∩ B'",
-      "img": null
+      "img": "DM1.png"
     },
     {
       "qno": 6,
       "law_name": "de-morgan law",
       "question": "(A ∩ B)’",
       "answer": "A' U B'",
-      "img": null
+      "img": "DM2.png"
     }
 
   ]

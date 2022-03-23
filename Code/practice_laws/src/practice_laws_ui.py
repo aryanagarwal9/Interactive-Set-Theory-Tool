@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.Image_label = QtWidgets.QLabel(self.centralwidget)
         self.Image_label.setGeometry(QtCore.QRect(390, 410, 671, 351))
         self.Image_label.setText("")
-        self.Image_label.setPixmap(QtGui.QPixmap("practice_laws/resources/ass_law.png"))
+        self.Image_label.setPixmap(QtGui.QPixmap("../resources/DM2.png"))
         self.Image_label.setScaledContents(True)
         self.Image_label.setObjectName("Image_label")
         self.next_button = QtWidgets.QPushButton(self.centralwidget)
@@ -103,8 +103,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.Question_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">According to Associative Law:</p><p align=\"center\">(A|B) | C = ??? </p></body></html>"))
-        self.Answer_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\">A | (B|C)</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"))
+        self.Question_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">According to de-morgan law:</p><p align=\"center\">(A ∩ B)’ = ??? </p></body></html>"))
+        self.Answer_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\">A' U B'</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"))
         self.next_button.setText(_translate("MainWindow", "Next"))
         self.main_menu_button.setText(_translate("MainWindow", "Main Menu"))
         self.header.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">FUNDAMENTAL SET LAWS</p></body></html>"))
