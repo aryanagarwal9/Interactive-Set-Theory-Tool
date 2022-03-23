@@ -11,6 +11,8 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Home Page")
+        self.setFixedWidth(1500)
+        self.setFixedHeight(800)
         self.connectSignalsSlots()
 
     def connectSignalsSlots(self):

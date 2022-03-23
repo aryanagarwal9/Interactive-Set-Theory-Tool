@@ -62,11 +62,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked{\n"
-"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-Aditya/Practice_VennDiagrams/ui_files/checkbox-checked.png);\n"
+"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_VennDiagrams/ui_files/checkbox-checked.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked{\n"
-"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-Aditya/Practice_VennDiagrams/ui_files/checkbox-unchecked.png);\n"
+"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_VennDiagrams/ui_files/checkbox-unchecked.png);\n"
 "}\n"
 "")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -167,14 +167,14 @@ class Ui_MainWindow(object):
         self.Answer.setStyleSheet("")
         self.Answer.setObjectName("Answer")
         self.submitButton = QtWidgets.QPushButton(self.centralwidget)
-        self.submitButton.setGeometry(QtCore.QRect(1100, 790, 121, 46))
+        self.submitButton.setGeometry(QtCore.QRect(1100, 690, 121, 46))
         self.submitButton.setStyleSheet("")
         self.submitButton.setObjectName("submitButton")
         self.nextButton = QtWidgets.QPushButton(self.centralwidget)
-        self.nextButton.setGeometry(QtCore.QRect(1250, 790, 121, 46))
+        self.nextButton.setGeometry(QtCore.QRect(1250, 690, 121, 46))
         self.nextButton.setObjectName("nextButton")
         self.buttonFrame = QtWidgets.QFrame(self.centralwidget)
-        self.buttonFrame.setGeometry(QtCore.QRect(40, 780, 281, 81))
+        self.buttonFrame.setGeometry(QtCore.QRect(800, 680, 281, 81))
         self.buttonFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.buttonFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.buttonFrame.setObjectName("buttonFrame")

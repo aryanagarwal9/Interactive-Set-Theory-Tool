@@ -3,7 +3,7 @@ import sys
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from practiceVennDiagram_ui import Ui_MainWindow
+from Code.Practice_VennDiagrams.practiceVennDiagram_ui import Ui_MainWindow
 import matplotlib.pyplot as plt
 from matplotlib_venn import venn2_unweighted, venn3_unweighted
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -22,6 +22,8 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Venn Diagrams")
+        self.setFixedWidth(1500)
+        self.setFixedHeight(800)
         self.unshaded_color = "#aed7ff"
         self.shaded_color = "#3598ff"
         # checkbox: [patch_2sets, patch_3sets, shaded_bool, patch_no]
@@ -32,7 +34,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
                         6: ['00', '011'], 7: ['00', '111']}
         self.setupPlotSpace()
         self.setupLayout()
-        self.venn_diagram_data = add_venn_data('vennDiagram.json')
+        self.venn_diagram_data = add_venn_data('../Practice_VennDiagrams/vennDiagram.json')
         self.counter = 0
         self.num_sets = self.venn_diagram_data[self.counter].num_sets
         self.plotUnshaded()
@@ -135,7 +137,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
                                            "font: bold \"Verdana\"; \n"
                                            "}\n"
                                            "")
-            self.ResultLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Your answer is correct</p></body></html>"))
+            self.ResultLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Correct Answer :)</p></body></html>"))
 
         else:
             self.ResultLabel.setStyleSheet("#ResultLabel{\n"
@@ -143,7 +145,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
                                            "font: bold \"Verdana\"; \n"
                                            "}\n"
                                            "")
-            self.ResultLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Your answer is wrong!!!</p></body></html>"))
+            self.ResultLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Wrong Answer :(</p></body></html>"))
         self.ResultLabel.raise_()
 
     def plot_answer(self, answer):
