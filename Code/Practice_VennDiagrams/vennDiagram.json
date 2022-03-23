@@ -1,0 +1,40 @@
+{
+  "venn_diagrams":[
+    {
+      "qno":1,
+      "questions":"Shade A ∪ B",
+      "num_sets": 2,
+      "answer": "1110000"
+    },
+    {
+      "qno":2,
+      "questions":"Shade A ∪ (B ∩ C)",
+      "num_sets": 3,
+      "answer": "1001101"
+    },
+    {
+      "qno":3,
+      "questions":"Shade A ∩ B",
+      "num_sets": 2,
+      "answer": "0010000"
+    },
+    {
+      "qno":4,
+      "questions":"Shade A ∩ B'",
+      "num_sets": 2,
+      "answer": "1000000"
+    },
+    {
+      "qno":5,
+      "questions":"Shade A ∪ B ∪ C",
+      "num_sets": 3,
+      "answer": "1111111"
+    },
+    {
+      "qno":6,
+      "questions":"Shade A ∩ B ∩ C",
+      "num_sets": 3,
+      "answer": "0000001"
+    }
+  ]
+}
