@@ -32,6 +32,10 @@ QRadioButton{
 	font: 22pt &quot;Verdana&quot;;
 }
 
+QRadioButton::hover{
+	background-color: rgb(221,221,221);
+}
+
 QRadioButton::indicator{
 	width: 70px;
 	height: 30px;
@@ -51,6 +55,11 @@ QPushButton{
 	color:white;
 	border-radius: 30%;
 	font: 20pt &quot;Verdana&quot;;
+}
+
+QPushButton::hover{
+	background-color:rgb(93,153,168);
+	border: 2px solid black;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
