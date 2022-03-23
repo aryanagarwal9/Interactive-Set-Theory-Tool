@@ -14,32 +14,63 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1438, 806)
+        MainWindow.resize(1437, 775)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet("QWidget{\n"
-"    background-color: rgba(255, 246, 233, 168);\n"
+"    background-color: rgb(255, 246, 233);\n"
+"    font-family: \"Verdana\";\n"
 "}\n"
 "\n"
 "QPushButton{\n"
 "    background-color: rgb(73,133,168);\n"
 "    border-radius: 20%;\n"
 "    color: white;\n"
-"    font: 16pt \"Serif\";\n"
+"    font-size: 16pt;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "    background-color: rgb(93,153,168);\n"
 "    border: 2px solid rgb(53, 54, 90);\n"
 "}\n"
+"       \n"
 "")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
-        self.Question_label = QtWidgets.QLabel(self.centralwidget)
-        self.Question_label.setGeometry(QtCore.QRect(230, 150, 941, 631))
+        self.next_button = QtWidgets.QPushButton(self.centralwidget)
+        self.next_button.setGeometry(QtCore.QRect(1230, 790, 111, 51))
+        self.next_button.setStyleSheet("")
+        self.next_button.setObjectName("next_button")
+        self.main_menu_button = QtWidgets.QPushButton(self.centralwidget)
+        self.main_menu_button.setGeometry(QtCore.QRect(60, 790, 131, 51))
+        self.main_menu_button.setStyleSheet("")
+        self.main_menu_button.setObjectName("main_menu_button")
+        self.header = QtWidgets.QLabel(self.centralwidget)
+        self.header.setGeometry(QtCore.QRect(40, 30, 1331, 101))
+        self.header.setStyleSheet("#header{\n"
+"    font-weight: bold;\n"
+"    font-size: 70pt;\n"
+"    text-align: center;\n"
+"    color: black;\n"
+"}")
+        self.header.setObjectName("header")
+        self.questionFrame = QtWidgets.QFrame(self.centralwidget)
+        self.questionFrame.setGeometry(QtCore.QRect(220, 140, 971, 621))
+        self.questionFrame.setStyleSheet("QFrame{border:none;\n"
+"background-color: rgb(73,133,168);\n"
+"border-radius: 20%;}\n"
+"\n"
+"QFrame::hover{\n"
+"    background-color: white;\n"
+"}")
+        self.questionFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.questionFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.questionFrame.setObjectName("questionFrame")
+        self.Question_label = QtWidgets.QLabel(self.questionFrame)
+        self.Question_label.setGeometry(QtCore.QRect(0, 0, 971, 621))
         self.Question_label.setStyleSheet("#Question_label{\n"
-"    background-color: rgb(73, 133, 168);\n"
-"    font: italic 26pt \"Serif\";\n"
+"    font-style: italic;\n"
+"    font-size: 28pt;\n"
 "    color: white;\n"
 "    border-radius: 20%;\n"
 "    padding-top: 15%;\n"
@@ -53,45 +84,33 @@ class Ui_MainWindow(object):
         self.Question_label.setScaledContents(True)
         self.Question_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.Question_label.setObjectName("Question_label")
-        self.Answer_label = QtWidgets.QLabel(self.centralwidget)
-        self.Answer_label.setGeometry(QtCore.QRect(230, 150, 941, 631))
+        self.Answer_label = QtWidgets.QLabel(self.questionFrame)
+        self.Answer_label.setGeometry(QtCore.QRect(20, 130, 901, 61))
         self.Answer_label.setStyleSheet("#Answer_label{\n"
 "    background-color: white;\n"
 "    border-radius: 20%;\n"
-"    font: bold 32pt \"Serif\";\n"
+"    font-family: \"Calibri\";\n"
+"    font-weight: 900;\n"
+"    font-size:32pt; \n"
 "}")
         self.Answer_label.setTextFormat(QtCore.Qt.RichText)
         self.Answer_label.setScaledContents(True)
         self.Answer_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.Answer_label.setObjectName("Answer_label")
-        self.Image_label = QtWidgets.QLabel(self.centralwidget)
-        self.Image_label.setGeometry(QtCore.QRect(390, 410, 671, 351))
+        self.Image_label = QtWidgets.QLabel(self.questionFrame)
+        self.Image_label.setGeometry(QtCore.QRect(20, 220, 901, 391))
+        self.Image_label.setStyleSheet("")
         self.Image_label.setText("")
         self.Image_label.setPixmap(QtGui.QPixmap("../resources/DM2.png"))
         self.Image_label.setScaledContents(True)
         self.Image_label.setObjectName("Image_label")
-        self.next_button = QtWidgets.QPushButton(self.centralwidget)
-        self.next_button.setGeometry(QtCore.QRect(1220, 790, 111, 51))
-        self.next_button.setStyleSheet("")
-        self.next_button.setObjectName("next_button")
-        self.main_menu_button = QtWidgets.QPushButton(self.centralwidget)
-        self.main_menu_button.setGeometry(QtCore.QRect(50, 790, 131, 51))
-        self.main_menu_button.setStyleSheet("")
-        self.main_menu_button.setObjectName("main_menu_button")
-        self.header = QtWidgets.QLabel(self.centralwidget)
-        self.header.setGeometry(QtCore.QRect(40, 30, 1331, 101))
-        self.header.setStyleSheet("#header{\n"
-"    font: 70pt bold \"Serif\";\n"
-"    text-align: center;\n"
-"\n"
-"}")
-        self.header.setObjectName("header")
         self.Answer_label.raise_()
         self.Image_label.raise_()
+        self.Question_label.raise_()
         self.next_button.raise_()
         self.header.raise_()
-        self.Question_label.raise_()
         self.main_menu_button.raise_()
+        self.questionFrame.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -103,11 +122,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.Question_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">According to de-morgan law:</p><p align=\"center\">(A ∩ B)’ = ??? </p></body></html>"))
-        self.Answer_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\">A' U B'</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>"))
         self.next_button.setText(_translate("MainWindow", "Next"))
         self.main_menu_button.setText(_translate("MainWindow", "Main Menu"))
         self.header.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">FUNDAMENTAL SET LAWS</p></body></html>"))
+        self.Question_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">According to de-morgan law:</p><p align=\"center\">(A ∩ B)’ = ??? </p></body></html>"))
+        self.Answer_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">A' U B'</p></body></html>"))
 
 
 # if __name__ == "__main__":
