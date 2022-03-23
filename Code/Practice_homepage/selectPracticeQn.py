@@ -23,6 +23,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
 
     def redirect_HomePage(self):
         import Code.Main_Screen.MainScreen as Main
+
         self.window = Main.MainWindow()
         self.window.show()
         self.hide()
@@ -37,6 +38,10 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         import Code.Practice_VennDiagrams.practiceVennDiagram as Venns
         self.window = Venns.MainWindow()
         self.window.show()
+
+        self.w = Main.MainWindow()
+        self.w.show()
+        main
         self.hide()
 
 if __name__ == "__main__":
