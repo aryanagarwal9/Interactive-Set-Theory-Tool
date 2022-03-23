@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainScreen.ui'
+# Form implementation generated from reading ui file 'Main_Screen.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1438, 806)
+        MainWindow.resize(1081, 806)
         MainWindow.setStyleSheet("QWidget{\n"
 "    background-color: rgb(255,246,233);\n"
 "}\n"
@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
 "    font: 90pt \"Baloo Bhaijaan\";\n"
 "    background-color: rgb(73,133,168);\n"
 "    color: white;\n"
-"    border-radius: 30%;\n"
+"    border-radius: 70%;\n"
 "}\n"
 "\n"
 "QPushButton{\n"
@@ -49,23 +49,6 @@ class Ui_MainWindow(object):
         self.createButton = QtWidgets.QPushButton(self.centralwidget)
         self.createButton.setGeometry(QtCore.QRect(520, 620, 421, 131))
         self.createButton.setObjectName("createButton")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(40, 750, 271, 211))
-        self.label.setStyleSheet("border: 5px solid rgb(73,133,168);\n"
-"padding: 10px;\n"
-"")
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("img1.png"))
-        self.label.setScaledContents(True)
-        self.label.setObjectName("label")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(1120, 290, 301, 171))
-        self.label_4.setStyleSheet("padding: 10%;\n"
-"background-color: rgb(73,133,168);")
-        self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("img3.png"))
-        self.label_4.setScaledContents(True)
-        self.label_4.setObjectName("label_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")

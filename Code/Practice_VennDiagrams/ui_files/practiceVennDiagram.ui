@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1232</width>
-    <height>695</height>
+    <width>1081</width>
+    <height>806</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget{
-	background-color: rgb(255,246,233)
+	background-color: rgb(255,246,233);
 }
 
 QPushButton{
@@ -34,11 +34,17 @@ QFrame{
 	border:none;
 }
 
-QLabel{
+#Question{
 	font: Italic 22pt &quot;Verdana&quot;;
 	background-color: rgb(73, 133, 168);
 	border-radius: 20%;
 	color: white;
+}
+
+QLabel{
+	background-color: white;
+	font: 50pt &quot;Calibri&quot;;
+	font-weight: 900;
 }
 
 QCheckBox{
@@ -55,11 +61,11 @@ QCheckBox::indicator{
 }
 
 QCheckBox::indicator:checked{
-	image: url('/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-2-Aditya/Practice_VennDiagrams/src/ui_files/checkbox-checked.png');
+	image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-Aditya/Practice_VennDiagrams/ui_files/checkbox-checked.png);
 }
 
 QCheckBox::indicator:unchecked{
-	image: url('/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-2-Aditya/Practice_VennDiagrams/src/ui_files/checkbox-unchecked.png');
+	image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Scenario-Aditya/Practice_VennDiagrams/ui_files/checkbox-unchecked.png);
 }
 </string>
   </property>
@@ -373,9 +379,9 @@ QCheckBox::indicator:unchecked{
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>0</y>
-      <width>721</width>
-      <height>401</height>
+      <y>-10</y>
+      <width>1401</width>
+      <height>411</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -387,6 +393,41 @@ QCheckBox::indicator:unchecked{
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="ResultLabel">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>80</y>
+       <width>391</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(58, 142, 52);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Answer">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>120</y>
+       <width>411</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="submitButton">
     <property name="geometry">
@@ -417,13 +458,13 @@ QCheckBox::indicator:unchecked{
      <string>Next</string>
     </property>
    </widget>
-   <widget class="QFrame" name="AnswerFrame">
+   <widget class="QFrame" name="buttonFrame">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>0</y>
-      <width>701</width>
-      <height>401</height>
+      <x>40</x>
+      <y>780</y>
+      <width>281</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -432,13 +473,26 @@ QCheckBox::indicator:unchecked{
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QPushButton" name="yourAnswer">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>10</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Your Answer</string>
+     </property>
+    </widget>
    </widget>
    <zorder>QuestionFrame</zorder>
    <zorder>DiagramFrame</zorder>
    <zorder>CheckboxFrame</zorder>
    <zorder>submitButton</zorder>
    <zorder>nextButton</zorder>
-   <zorder>AnswerFrame</zorder>
+   <zorder>buttonFrame</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
