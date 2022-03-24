@@ -36,6 +36,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.setupLayout()
         self.venn_diagram_data = add_venn_data('../Practice_VennDiagrams/vennDiagram.json')
         self.counter = 0
+        self.score = 0
         self.num_sets = self.venn_diagram_data[self.counter].num_sets
         self.plotUnshaded()
         self.connectSignalSlots()
@@ -58,6 +59,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.nextButton.clicked.connect(self.nextPressed)
         self.submitButton.clicked.connect(self.submitPressed)
         self.yourAnswer.clicked.connect(self.show_myAnswer)
+        self.mainMenu.clicked.connect(self.mainMenu_pressed)
         self.Area1.stateChanged.connect(lambda: self.shadeArea1(self.Area1))
         self.Area2.stateChanged.connect(lambda: self.shadeArea2(self.Area2))
         self.Area3.stateChanged.connect(lambda: self.shadeArea3(self.Area3))
@@ -66,12 +68,23 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.Area6.stateChanged.connect(lambda: self.shadeArea_3sets(self.Area6))
         self.Area7.stateChanged.connect(lambda: self.shadeArea_3sets(self.Area7))
 
+    def mainMenu_pressed(self):
+        import Code.Main_Screen.MainScreen as Main
+        self.window = Main.MainWindow()
+        self.window.show()
+        self.hide()
+
     def display_first_question(self):
         _translate = QCoreApplication.translate
         question_label = "<html><head/><body><p>&nbsp; &nbsp;" + str(self.venn_diagram_data[self.counter].question_id) + ". " + self.venn_diagram_data[self.counter].question + "</p></body></html>"
         self.Question.setText(_translate("MainWindow", question_label))
 
     def submitPressed(self):
+        _translate = QCoreApplication.translate
+        if self.counter == len(self.venn_diagram_data) - 1:
+            self.nextButton.setText(_translate("MainWindow", "Finish"))
+            self.submitButton.hide()
+
         result = self.verify_answer(self.venn_diagram_data[self.counter].question_id,
                                     self.venn_diagram_data[self.counter].question,
                                     self.venn_diagram_data[self.counter].num_sets,
@@ -99,16 +112,26 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.Answer.raise_()
 
     def nextPressed(self):
+        _translate = QCoreApplication.translate
         self.counter += 1
-        self.counter = self.counter % len(self.venn_diagram_data)
-        self.update_ui(self.venn_diagram_data[self.counter].question_id,
+        if self.counter == len(self.venn_diagram_data):
+            self.display_scorePage()
+
+        else:
+            self.update_ui(self.venn_diagram_data[self.counter].question_id,
                                     self.venn_diagram_data[self.counter].question,
                                     self.venn_diagram_data[self.counter].num_sets,
                                     self.venn_diagram_data[self.counter].answer)
 
-        self.clear_checkboxes()
-        self.clear_result()
-        self.plotUnshaded()
+            self.clear_checkboxes()
+            self.clear_result()
+            self.plotUnshaded()
+
+    def display_scorePage(self):
+        import Code.ScoreDisplay.scoreDisplay as score
+        self.score_window = score.MainWindow(self.score,len(self.venn_diagram_data))
+        self.score_window.show()
+        self.hide()
 
     def update_ui(self, question_id, question, num_sets, answer):
         _translate = QCoreApplication.translate
@@ -132,6 +155,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
     def show_result(self, result):
         _translate = QCoreApplication.translate
         if result:
+            self.score += 1
             self.ResultLabel.setStyleSheet("#ResultLabel{\n"
                                            "color: rgb(58, 142, 52); \n"
                                            "font: bold \"Verdana\"; \n"
