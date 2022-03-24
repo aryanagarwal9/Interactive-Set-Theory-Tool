@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1081</width>
-    <height>806</height>
+    <width>1444</width>
+    <height>869</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,6 +25,9 @@ QPushButton{
 	border-radius: 20%;
 }
 
+#result{
+	background-color: white;
+}
 QPushButton:hover{
 	background-color: rgb(93,153,168);
 	border: 2px solid black;
@@ -433,7 +436,7 @@ QCheckBox::indicator:unchecked{
     <property name="geometry">
      <rect>
       <x>1100</x>
-      <y>790</y>
+      <y>700</y>
       <width>121</width>
       <height>46</height>
      </rect>
@@ -449,7 +452,7 @@ QCheckBox::indicator:unchecked{
     <property name="geometry">
      <rect>
       <x>1250</x>
-      <y>790</y>
+      <y>700</y>
       <width>121</width>
       <height>46</height>
      </rect>
@@ -461,8 +464,8 @@ QCheckBox::indicator:unchecked{
    <widget class="QFrame" name="buttonFrame">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>780</y>
+      <x>800</x>
+      <y>690</y>
       <width>281</width>
       <height>81</height>
      </rect>
@@ -487,12 +490,26 @@ QCheckBox::indicator:unchecked{
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="mainMenu">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>700</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Main Menu</string>
+    </property>
+   </widget>
    <zorder>QuestionFrame</zorder>
    <zorder>DiagramFrame</zorder>
    <zorder>CheckboxFrame</zorder>
    <zorder>submitButton</zorder>
    <zorder>nextButton</zorder>
    <zorder>buttonFrame</zorder>
+   <zorder>mainMenu</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

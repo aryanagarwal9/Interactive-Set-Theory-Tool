@@ -44,11 +44,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QRadioButton::indicator:checked{\n"
-"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_setOperations/radio-checked.png);\n"
+"    image: url(../Practice_SetOperations/src/files_ui/radio-checked.png);\n"
 "}\n"
 "\n"
 "QRadioButton::indicator:unchecked{\n"
-"    image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_setOperations/radio-unchecked.png);\n"
+"    image: url(../Practice_SetOperations/src/files_ui/radio-unchecked.png);\n"
 "}\n"
 "\n"
 "QPushButton{\n"
@@ -73,17 +73,17 @@ class Ui_MainWindow(object):
         self.option1_button.setStyleSheet("")
         self.option1_button.setObjectName("option1_button")
         self.option2_button = QtWidgets.QRadioButton(self.centralwidget)
-        self.option2_button.setGeometry(QtCore.QRect(200, 560, 881, 81))
+        self.option2_button.setGeometry(QtCore.QRect(200, 340, 881, 81))
         self.option2_button.setStyleSheet("")
         self.option2_button.setText("")
         self.option2_button.setObjectName("option2_button")
         self.option3_button = QtWidgets.QRadioButton(self.centralwidget)
-        self.option3_button.setGeometry(QtCore.QRect(200, 340, 881, 81))
+        self.option3_button.setGeometry(QtCore.QRect(200, 450, 881, 81))
         self.option3_button.setStyleSheet("")
         self.option3_button.setText("")
         self.option3_button.setObjectName("option3_button")
         self.option4_button = QtWidgets.QRadioButton(self.centralwidget)
-        self.option4_button.setGeometry(QtCore.QRect(200, 450, 881, 81))
+        self.option4_button.setGeometry(QtCore.QRect(200, 560, 881, 81))
         self.option4_button.setStyleSheet("")
         self.option4_button.setText("")
         self.option4_button.setObjectName("option4_button")
@@ -110,8 +110,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.question.setText(_translate("MainWindow", "<html><head/><body><p>&nbsp; &nbsp; c wvjkenvrnwlkvnws</p></body></html>"))
-        self.option1_button.setText(_translate("MainWindow", "nfwnvlkwnfwpv"))
+        self.question.setText(_translate("MainWindow", "<html><head/><body><p>Question</p></body></html>"))
+        self.option1_button.setText(_translate("MainWindow", "Option1"))
         self.next_button.setText(_translate("MainWindow", "Next"))
         self.mainMenu_button.setText(_translate("MainWindow", "Main Menu"))
         self.submit_button.setText(_translate("MainWindow", "Submit"))

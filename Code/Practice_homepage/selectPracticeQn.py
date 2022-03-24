@@ -17,20 +17,26 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.HomeButton.clicked.connect(self.redirect_HomePage)
         # self.TeacherSheets.clicked.connect(self.redirect_TeacherSheets)
         self.SetLaws.clicked.connect(self.redirect_SetLaws)
-        # self.SetOperations.clicked.connect(self.redirect_SetOperations)
+        self.SetOperations.clicked.connect(self.redirect_SetOperations)
         self.VennDiagrams.clicked.connect(self.redirect_VennDiagrams)
         pass
 
     def redirect_HomePage(self):
         import Code.Main_Screen.MainScreen as Main
-        self.window = Main.MainWindow()
-        self.window.show()
+        self.window1 = Main.MainWindow()
+        self.window1.show()
         self.hide()
 
     def redirect_SetLaws(self):
         import Code.practice_laws.src.practice_laws as laws
-        self.window = laws.MainWindow()
-        self.window.show()
+        self.window2 = laws.MainWindow()
+        self.window2.show()
+        self.hide()
+
+    def redirect_SetOperations(self):
+        import Code.Practice_SetOperations.src.set_operations as set_operations
+        self.window3 = set_operations.MainWindow()
+        self.window3.show()
         self.hide()
 
     def redirect_VennDiagrams(self):

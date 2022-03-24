@@ -43,11 +43,11 @@ QRadioButton::indicator{
 }
 
 QRadioButton::indicator:checked{
-	image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_setOperations/radio-checked.png);
+	image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_SetOperations/src/files_ui/radio-checked.png);
 }
 
 QRadioButton::indicator:unchecked{
-	image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_setOperations/radio-unchecked.png);
+	image: url(/Users/adityaparashar/Education/UCL/ENGF0002/Scenario/Code/Practice_SetOperations/src/files_ui/radio-unchecked.png);
 }
 
 QPushButton{
