@@ -19,7 +19,6 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.SetLaws.clicked.connect(self.redirect_SetLaws)
         self.SetOperations.clicked.connect(self.redirect_SetOperations)
         self.VennDiagrams.clicked.connect(self.redirect_VennDiagrams)
-        pass
 
     def redirect_HomePage(self):
         import Code.Main_Screen.MainScreen as Main
@@ -43,6 +42,10 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         import Code.Practice_VennDiagrams.practiceVennDiagram as Venns
         self.window = Venns.MainWindow()
         self.window.show()
+
+        self.w = Main.MainWindow()
+        self.w.show()
+        main
         self.hide()
 
 if __name__ == "__main__":
