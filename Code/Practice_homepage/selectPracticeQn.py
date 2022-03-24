@@ -19,7 +19,6 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.SetLaws.clicked.connect(self.redirect_SetLaws)
         self.SetOperations.clicked.connect(self.redirect_SetOperations)
         self.VennDiagrams.clicked.connect(self.redirect_VennDiagrams)
-        pass
 
     def redirect_HomePage(self):
         import Code.Main_Screen.MainScreen as Main
