@@ -14,65 +14,92 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(841, 694)
+        MainWindow.resize(1438, 806)
         MainWindow.setStyleSheet("QWidget{\n"
-" background-color: rgb(255,246,233)\n"
+" background-color: rgb(255,246,233);\n"
+"}\n"
+"\n"
+"QLabel{\n"
+"    background-color:rgb(73, 133, 168);\n"
+"    border-radius: 20%;\n"
+"    color: white;\n"
+"    font: 26pt \"Verdana\";\n"
+"}\n"
+"\n"
+"QRadioButton{\n"
+"    background-color:white;\n"
+"    border-radius: 20%;\n"
+"    border: 1px solid black;\n"
+"    font: 22pt \"Verdana\";\n"
+"}\n"
+"\n"
+"QRadioButton::hover{\n"
+"    background-color: rgb(221,221,221);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator{\n"
+"    width: 70px;\n"
+"    height: 30px;\n"
+"    margin-left: 10px;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked{\n"
+"    image: url(files_ui/radio-checked.png);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:unchecked{\n"
+"    image: url(files_ui/radio-unchecked.png);\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"    background-color:rgb(73,133,168);\n"
+"    color:white;\n"
+"    border-radius: 30%;\n"
+"    font: 20pt \"Verdana\";\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"    background-color:rgb(93,153,168);\n"
+"    border: 2px solid black;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.question = QtWidgets.QLabel(self.centralwidget)
-        self.question.setGeometry(QtCore.QRect(129, 75, 691, 71))
-        self.question.setStyleSheet("QLabel{background-color:rgb(73, 133, 168)}")
-        self.question.setText("")
+        self.question.setGeometry(QtCore.QRect(170, 40, 1091, 151))
+        self.question.setStyleSheet("")
         self.question.setObjectName("question")
-        self.answer_1 = QtWidgets.QRadioButton(self.centralwidget)
-        self.answer_1.setGeometry(QtCore.QRect(130, 190, 691, 41))
-        self.answer_1.setStyleSheet("QRadioButton{background-color:rgb(255, 255, 255)}")
-        self.answer_1.setText("")
-        self.answer_1.setObjectName("answer_1")
-        self.answer_2 = QtWidgets.QRadioButton(self.centralwidget)
-        self.answer_2.setGeometry(QtCore.QRect(130, 250, 691, 41))
-        self.answer_2.setStyleSheet("QRadioButton{background-color:rgb(255, 255, 255)}")
-        self.answer_2.setText("")
-        self.answer_2.setObjectName("answer_2")
-        self.answer_3 = QtWidgets.QRadioButton(self.centralwidget)
-        self.answer_3.setGeometry(QtCore.QRect(130, 310, 691, 41))
-        self.answer_3.setStyleSheet("QRadioButton{background-color:rgb(255, 255, 255)}")
-        self.answer_3.setText("")
-        self.answer_3.setObjectName("answer_3")
-        self.answer_4 = QtWidgets.QRadioButton(self.centralwidget)
-        self.answer_4.setGeometry(QtCore.QRect(130, 370, 691, 41))
-        self.answer_4.setStyleSheet("QRadioButton{background-color:rgb(255, 255, 255)}")
-        self.answer_4.setText("")
-        self.answer_4.setObjectName("answer_4")
-        self.back_button = QtWidgets.QPushButton(self.centralwidget)
-        self.back_button.setGeometry(QtCore.QRect(130, 450, 113, 32))
-        self.back_button.setStyleSheet("QPushButton{\n"
-"background-color:rgb(73,133,168);\n"
-"color:white;\n"
-"\n"
-"}")
-        self.back_button.setObjectName("back_button")
+        self.option1_button = QtWidgets.QRadioButton(self.centralwidget)
+        self.option1_button.setGeometry(QtCore.QRect(200, 230, 881, 81))
+        self.option1_button.setStyleSheet("")
+        self.option1_button.setObjectName("option1_button")
+        self.option2_button = QtWidgets.QRadioButton(self.centralwidget)
+        self.option2_button.setGeometry(QtCore.QRect(200, 340, 881, 81))
+        self.option2_button.setStyleSheet("")
+        self.option2_button.setText("")
+        self.option2_button.setObjectName("option2_button")
+        self.option3_button = QtWidgets.QRadioButton(self.centralwidget)
+        self.option3_button.setGeometry(QtCore.QRect(200, 450, 881, 81))
+        self.option3_button.setStyleSheet("")
+        self.option3_button.setText("")
+        self.option3_button.setObjectName("option3_button")
+        self.option4_button = QtWidgets.QRadioButton(self.centralwidget)
+        self.option4_button.setGeometry(QtCore.QRect(200, 560, 881, 81))
+        self.option4_button.setStyleSheet("")
+        self.option4_button.setText("")
+        self.option4_button.setObjectName("option4_button")
         self.next_button = QtWidgets.QPushButton(self.centralwidget)
-        self.next_button.setGeometry(QtCore.QRect(710, 450, 113, 32))
-        self.next_button.setStyleSheet("QPushButton{\n"
-"background-color:rgb(73,133,168);\n"
-"color: white;\n"
-"}")
+        self.next_button.setGeometry(QtCore.QRect(1210, 710, 141, 61))
+        self.next_button.setStyleSheet("")
         self.next_button.setObjectName("next_button")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(132, 20, 121, 32))
-        self.pushButton.setStyleSheet("QPushButton{\n"
-"background-color:rgb(73,133,168);\n"
-"color:white;\n"
-"\n"
-"}")
-        self.pushButton.setObjectName("pushButton")
+        self.mainMenu_button = QtWidgets.QPushButton(self.centralwidget)
+        self.mainMenu_button.setGeometry(QtCore.QRect(100, 710, 181, 61))
+        self.mainMenu_button.setStyleSheet("")
+        self.mainMenu_button.setObjectName("mainMenu_button")
+        self.submit_button = QtWidgets.QPushButton(self.centralwidget)
+        self.submit_button.setGeometry(QtCore.QRect(1000, 710, 161, 61))
+        self.submit_button.setStyleSheet("")
+        self.submit_button.setObjectName("submit_button")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 841, 24))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -83,9 +110,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.back_button.setText(_translate("MainWindow", "Back"))
+        self.question.setText(_translate("MainWindow", "<html><head/><body><p>Question</p></body></html>"))
+        self.option1_button.setText(_translate("MainWindow", "Option1"))
         self.next_button.setText(_translate("MainWindow", "Next"))
-        self.pushButton.setText(_translate("MainWindow", "Main Menu"))
+        self.mainMenu_button.setText(_translate("MainWindow", "Main Menu"))
+        self.submit_button.setText(_translate("MainWindow", "Submit"))
 
 
 if __name__ == "__main__":
