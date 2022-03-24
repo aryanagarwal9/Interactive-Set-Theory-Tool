@@ -33,7 +33,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.hide()
 
     def redirect_SetOperations(self):
-        import Code.Practice_SetOperations.src.set_operations as set_operations
+        import Code.Practice_setOperations.src.set_operations as set_operations
         self.window3 = set_operations.MainWindow()
         self.window3.show()
         self.hide()
