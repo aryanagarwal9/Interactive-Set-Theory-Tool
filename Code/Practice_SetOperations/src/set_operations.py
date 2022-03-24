@@ -46,20 +46,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.set_questions = add_set_questions('../resources/set_questions.json')
         self.option_buttons = [self.option1_button, self.option2_button, self.option3_button, self.option4_button]
 
-        # To Get 1st Question
-        self.counter = -1
-        self.next_pressed()
+        self.score = 0
+        self.counter = 0
+        self.first_question()
 
     def connectSignalsSlots(self):
         self.next_button.clicked.connect(self.next_pressed)
         self.submit_button.clicked.connect(self.submit_pressed)
 
-    def next_pressed(self):
+    def first_question(self):
         i = self.counter
         self.update_ui(self.set_questions[i].question, self.set_questions[i].option1, self.set_questions[i].option2,
                        self.set_questions[i].option3, self.set_questions[i].option4)
+
+    def next_pressed(self):
         self.counter += 1
-        self.counter %= len(self.set_questions)
+        i = self.counter
+        if self.counter == len(self.set_questions):
+            self.finish()
+        else:
+            self.update_ui(self.set_questions[i].question, self.set_questions[i].option1, self.set_questions[i].option2,
+                           self.set_questions[i].option3, self.set_questions[i].option4)
 
     def submit_pressed(self):
         selected_option = self.get_selected_option()
@@ -67,6 +74,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.show_answer()
             for button in self.option_buttons:
                 button.setEnabled(False)
+
+    def finish(self):
+        score = str(self.score)
+        print(score)
+        total_ques = str(len(self.set_questions))
+        self.next_button.setText(score + "/" + total_ques)
+        self.next_button.setEnabled(False)
 
     def update_ui(self, question, option1, option2, option3, option4):
         _translate = QCoreApplication.translate
@@ -95,6 +109,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         selected_option = self.get_selected_option()
         answer = self.set_questions[self.counter].answer
         if selected_option == answer:
+            self.score += 1
             return True
         else:
             return False
