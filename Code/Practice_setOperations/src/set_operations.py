@@ -2,7 +2,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
-from Code.Practice_SetOperations.src.set_operations_ui import Ui_MainWindow
+from Code.Practice_setOperations.src.set_operations_ui import Ui_MainWindow
 
 import json
 import sys
