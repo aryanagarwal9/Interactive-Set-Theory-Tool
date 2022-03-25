@@ -127,13 +127,3 @@ class Ui_MainWindow(object):
         self.header.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">FUNDAMENTAL SET LAWS</p></body></html>"))
         self.Question_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">According to de-morgan law:</p><p align=\"center\">(A ∩ B)’ = ??? </p></body></html>"))
         self.Answer_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">A' U B'</p></body></html>"))
-
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = Ui_MainWindow()
-#     ui.setupUi(MainWindow)
-#     MainWindow.show()
-#     sys.exit(app.exec_())

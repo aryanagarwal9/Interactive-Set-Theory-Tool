@@ -131,10 +131,3 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.option_buttons[answer - 1].setStyleSheet("background-color: rgb(72, 169, 108);")
         if not self.is_answer_correct():
             self.option_buttons[selected_option - 1].setStyleSheet("background-color: rgb(169, 72, 72);")
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    win = MainWindow()
-    win.show()
-    sys.exit(app.exec())

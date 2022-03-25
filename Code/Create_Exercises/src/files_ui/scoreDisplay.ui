@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1438</width>
+    <height>806</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: rgb(255,246,233);
+}
+
+#resultLabel{
+	background-color: rgb(73,133,168);
+	border-radius: 40%;
+	color: white;
+	font: 50pt &quot;Verdana&quot;;
+}
+
+#q1{
+font:35pt 'Verdana';
+background-color:rgb(73,133,168);
+color:white;}
+
+#q2{
+font:35pt 'Verdana';
+background-color:rgb(73,133,168);
+color:white;}
+
+#q3{
+font:35pt 'Verdana';
+background-color:rgb(73,133,168);
+color:white;}
+
+QPushButton{
+	background-color: rgb(73,133,168);
+	border-radius: 20%;
+	color: white;
+	font: 20pt &quot;Verdana&quot;;
+}
+
+QPushButton:hover{
+	background-color: rgb(93,153,168);
+	border: 2px solid black;
+}
+
+QLabel{
+	font: 80pt &quot;Calibri&quot;;
+	font-weight: 900;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="resultLabel">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>180</y>
+      <width>921</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;TextLabel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Header">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>981</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;FINAL SCORE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mainMenu_Button">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Main Menu</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="q1">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>250</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="q2">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>330</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="q3">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>410</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

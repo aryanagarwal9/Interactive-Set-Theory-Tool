@@ -1,0 +1,1 @@
+[{"NumberOfSets": "2", "Set Equation": "A\u222aB", "A": "1,2,3", "B": "3,4,5", "C": ""}, {"NumberOfSets": "2", "Set Equation": "A\u2229B", "A": "3,4,5", "B": "3,4", "C": ""}, {"NumberOfSets": "3", "Set Equation": "C\u222a(B\u2229A)", "A": "1,2,3", "B": "2,3,4", "C": "1,2,3"}]

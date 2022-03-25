@@ -26,7 +26,6 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.setFixedHeight(800)
         self.unshaded_color = "#aed7ff"
         self.shaded_color = "#3598ff"
-        # checkbox: [patch_2sets, patch_3sets, shaded_bool, patch_no]
         self.checkboxes = {self.Area1: ["10", "100", 0], self.Area2: ["01", "010", 0], self.Area3: ["11", "001", 0],
                            self.Area4: ["00", "110", 0], self.Area5: ["00", "101", 0], self.Area6: ["00", "011", 0],
                            self.Area7: ["00", "111", 0]}
@@ -94,6 +93,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.display_answerLabel()
         self.buttonFrame.show()
         self.show_result(result)
+        self.setEnabledFalse()
 
     def show_myAnswer(self):
         myAnswer = self.storeAnswer()
@@ -125,6 +125,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
 
             self.clear_checkboxes()
             self.clear_result()
+            self.setEnabledTrue()
             self.plotUnshaded()
 
     def display_scorePage(self):
@@ -139,6 +140,14 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.Question.setText(_translate("MainWindow", question_label))
         self.num_sets = num_sets
         self.Answer.setText(_translate("MainWindow", ""))
+
+    def setEnabledFalse(self):
+        for i in self.checkboxes:
+            i.setEnabled(False)
+
+    def setEnabledTrue(self):
+        for i in self.checkboxes:
+            i.setEnabled(True)
 
     def clear_plot(self):
         self.figure.clear()
@@ -387,10 +396,3 @@ def add_venn_data(file):
             ques_data = Venn_data(ques["qno"], ques["questions"], ques["num_sets"], ques["answer"])
             venn_data.append(ques_data)
         return venn_data
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    win = MainWindow()
-    win.show()
-    sys.exit(app.exec_())

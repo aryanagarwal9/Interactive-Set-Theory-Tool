@@ -15,7 +15,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
 
     def connectSignalSlots(self):
         self.HomeButton.clicked.connect(self.redirect_HomePage)
-        # self.TeacherSheets.clicked.connect(self.redirect_TeacherSheets)
+        self.TeacherSheets.clicked.connect(self.redirect_TeacherSheets)
         self.SetLaws.clicked.connect(self.redirect_SetLaws)
         self.SetOperations.clicked.connect(self.redirect_SetOperations)
         self.VennDiagrams.clicked.connect(self.redirect_VennDiagrams)
@@ -40,16 +40,12 @@ class MainWindow(Ui_MainWindow, QMainWindow):
 
     def redirect_VennDiagrams(self):
         import Code.Practice_VennDiagrams.practiceVennDiagram as Venns
-        self.window = Venns.MainWindow()
-        self.window.show()
-
-        self.w = Main.MainWindow()
-        self.w.show()
-        main
+        self.window4 = Venns.MainWindow()
+        self.window4.show()
         self.hide()
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    win = MainWindow()
-    win.show()
-    sys.exit(app.exec_())
+    def redirect_TeacherSheets(self):
+        import Code.Create_Exercises.src.loadExercises as Sheets
+        self.window5 = Sheets.MainWindow()
+        self.window5.show()
+        self.hide()

@@ -65,7 +65,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.question = QtWidgets.QLabel(self.centralwidget)
-        self.question.setGeometry(QtCore.QRect(170, 40, 1091, 151))
+        self.question.setGeometry(QtCore.QRect(170, 40, 1121, 151))
         self.question.setStyleSheet("")
         self.question.setObjectName("question")
         self.option1_button = QtWidgets.QRadioButton(self.centralwidget)
@@ -115,13 +115,3 @@ class Ui_MainWindow(object):
         self.next_button.setText(_translate("MainWindow", "Next"))
         self.mainMenu_button.setText(_translate("MainWindow", "Main Menu"))
         self.submit_button.setText(_translate("MainWindow", "Submit"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())

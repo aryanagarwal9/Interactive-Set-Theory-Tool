@@ -1,9 +1,8 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from MainScreen_ui import Ui_MainWindow
+from Code.Main_Screen.MainScreen_ui import Ui_MainWindow
 import sys
-from Code.Practice_homepage.selectPracticeQn import MainWindow as Practice_main
 
 
 class MainWindow(Ui_MainWindow, QMainWindow):
@@ -17,11 +16,18 @@ class MainWindow(Ui_MainWindow, QMainWindow):
 
     def connectSignalsSlots(self):
         self.practiceButton.clicked.connect(self.redirect_practice)
-        # self.createButton.clicked.connect(self.redirect_create)
+        self.createButton.clicked.connect(self.redirect_create)
 
     def redirect_practice(self):
-        self.w = Practice_main()
-        self.w.show()
+        from Code.Practice_homepage.selectPracticeQn import MainWindow as Practice_main
+        self.window1 = Practice_main()
+        self.window1.show()
+        self.hide()
+
+    def redirect_create(self):
+        from Code.Create_Exercises.src.CreateExercises import MainWindow as Create
+        self.window2 = Create()
+        self.window2.show()
         self.hide()
 
 if __name__ == "__main__":

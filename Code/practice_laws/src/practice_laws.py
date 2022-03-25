@@ -67,10 +67,3 @@ def add_set_laws(file):
             set_laws.append(set_law)
 
     return set_laws
-
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     win = MainWindow()
-#     win.show()
-#     sys.exit(app.exec())

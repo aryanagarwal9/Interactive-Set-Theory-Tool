@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Code/ScoreDisplay/scoreDisplay.ui'
+# Form implementation generated from reading ui file 'scoreDisplay.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1081, 806)
+        MainWindow.resize(1438, 806)
         MainWindow.setStyleSheet("QWidget{\n"
 "    background-color: rgb(255,246,233);\n"
 "}\n"
@@ -25,6 +25,21 @@ class Ui_MainWindow(object):
 "    color: white;\n"
 "    font: 50pt \"Verdana\";\n"
 "}\n"
+"\n"
+"#q1{\n"
+"font:20pt \'Verdana\';\n"
+"background-color:rgb(73,133,168);\n"
+"color:white;}\n"
+"\n"
+"#q2{\n"
+"font:20pt \'Verdana\';\n"
+"background-color:rgb(73,133,168);\n"
+"color:white;}\n"
+"\n"
+"#q3{\n"
+"font:20pt \'Verdana\';\n"
+"background-color:rgb(73,133,168);\n"
+"color:white;}\n"
 "\n"
 "QPushButton{\n"
 "    background-color: rgb(73,133,168);\n"
@@ -45,7 +60,8 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.resultLabel = QtWidgets.QLabel(self.centralwidget)
-        self.resultLabel.setGeometry(QtCore.QRect(300, 200, 921, 391))
+        self.resultLabel.setGeometry(QtCore.QRect(290, 180, 921, 561))
+        self.resultLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.resultLabel.setObjectName("resultLabel")
         self.Header = QtWidgets.QLabel(self.centralwidget)
         self.Header.setGeometry(QtCore.QRect(270, 50, 981, 121))
@@ -53,6 +69,15 @@ class Ui_MainWindow(object):
         self.mainMenu_Button = QtWidgets.QPushButton(self.centralwidget)
         self.mainMenu_Button.setGeometry(QtCore.QRect(20, 20, 191, 61))
         self.mainMenu_Button.setObjectName("mainMenu_Button")
+        self.q1 = QtWidgets.QLabel(self.centralwidget)
+        self.q1.setGeometry(QtCore.QRect(670, 250, 181, 71))
+        self.q1.setObjectName("q1")
+        self.q2 = QtWidgets.QLabel(self.centralwidget)
+        self.q2.setGeometry(QtCore.QRect(670, 300, 181, 71))
+        self.q2.setObjectName("q2")
+        self.q3 = QtWidgets.QLabel(self.centralwidget)
+        self.q3.setGeometry(QtCore.QRect(670, 350, 181, 71))
+        self.q3.setObjectName("q3")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -67,3 +92,6 @@ class Ui_MainWindow(object):
         self.resultLabel.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">TextLabel</p></body></html>"))
         self.Header.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">FINAL SCORE</p></body></html>"))
         self.mainMenu_Button.setText(_translate("MainWindow", "Main Menu"))
+        self.q1.setText(_translate("MainWindow", ""))
+        self.q2.setText(_translate("MainWindow", ""))
+        self.q3.setText(_translate("MainWindow", ""))

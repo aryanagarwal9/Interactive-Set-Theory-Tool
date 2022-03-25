@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:rgba(255,246,233,168);
+}</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="answerInput">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>290</y>
+      <width>501</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:white</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="instructionLabel">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>250</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{background-color:rgb(73,133,168);
+font:Italic 22pt 'Verdana';
+border-radius:20px;}</string>
+    </property>
+    <property name="text">
+     <string> Please Enter your Answer Below:</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>233</width>
+      <height>119</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="a">
+         <property name="styleSheet">
+          <string notr="true">Font:Italic 22pt 'Verdana'</string>
+         </property>
+         <property name="text">
+          <string>A=</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="elem_input1">
+         <property name="styleSheet">
+          <string notr="true">QLabel
+{
+font:Italic 22pt 'Verdana';}</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="b">
+         <property name="styleSheet">
+          <string notr="true">font:Italic 22pt 'Verdana'</string>
+         </property>
+         <property name="text">
+          <string>B=</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="elem_input2">
+         <property name="styleSheet">
+          <string notr="true">font:22pt 'Verdana'</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="c">
+         <property name="styleSheet">
+          <string notr="true">font:italic 22pt 'Verdana'</string>
+         </property>
+         <property name="text">
+          <string>C=</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="elem_input3">
+         <property name="styleSheet">
+          <string notr="true">QLabel
+{
+font:Italic 22pt 'Verdana';}</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>211</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+font:22pt 'Verdana';}</string>
+       </property>
+       <property name="text">
+        <string>What is:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="eqn_input">
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+font:Italic 22pt 'Verdana';}</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="nextButton">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>500</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(73,133,168);}</string>
+    </property>
+    <property name="text">
+     <string>NEXT</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(73,133,168);}</string>
+    </property>
+    <property name="text">
+     <string>BACK</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="homeButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(73,133,168);}</string>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionView">
+   <property name="text">
+    <string>View</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

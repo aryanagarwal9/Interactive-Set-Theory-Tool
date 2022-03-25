@@ -26,12 +26,6 @@
     },
     {
       "qno":5,
-      "questions":"Shade A ∪ B ∪ C",
-      "num_sets": 3,
-      "answer": "1111111"
-    },
-    {
-      "qno":6,
       "questions":"Shade A ∩ B ∩ C",
       "num_sets": 3,
       "answer": "0000001"

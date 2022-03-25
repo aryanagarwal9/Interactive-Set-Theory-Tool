@@ -1,20 +1,49 @@
 {
-  "set_questions": [
+  "set_questions":[
     {
-      "ques_num": 1,
-      "question": "question 1",
-      "option1": "option1",
-      "option2": "option2",
-      "option3": "option3",
-      "option4": "option4",
+      "ques_num":1,
+      "question": "If A, B and C are any three sets, then A – (B ∪ C) is equal to",
+      "option1": "(A – B) ∪ (A – C)",
+      "option2": "(A – B) ∪ C",
+      "option3": "(A – B) ∩ C",
+      "option4": "(A – B) ∩ (A – C)",
+      "answer": 4
+    },
+    {
+      "ques_num":2,
+      "question": "The members of the set S = {x | x is the square of an integer and x < 100} is",
+      "option1": "{0, 2, 4, 5, 9, 58, 49, 56, 99, 12}",
+      "option2": "{0, 1, 4, 9, 16, 25, 36, 49, 64, 81}",
+      "option3": "{1, 4, 9, 16, 25, 36, 64, 81, 85, 99}",
+      "option4": " {0, 1, 4, 9, 16, 25, 36, 49, 64, 121}",
       "answer": 2
     },
     {
-      "ques_num": 1,
-      "question": "question 2",
-      "option1": "option1",
-      "option2": "option2",
-      "option3": "option3",
-      "option4": "option4",
+      "ques_num":3,
+      "question": "If the set has P elements, B has q elements then number of elements in A × B is",
+      "option1": "p*q",
+      "option2": "p+q",
+      "option3": "p+q+1",
+      "option4": "p^2",
       "answer": 1
-    }]}
+    },
+    {
+      "ques_num":4,
+      "question": "The set {x:(x−2)(x−3) > 0} is equal to",
+      "option1": "{x: 2<x<3}",
+      "option2": "{x: x>3} ∪ {x: x<2}",
+      "option3": "{x: x<3} ∪ {x: x>2}",
+      "option4": "None of these",
+      "answer": 2
+    },
+    {
+      "ques_num":5,
+      "question": "The symmetric difference of two sets A and B is",
+      "option1": "(A−B)∩(B−A)",
+      "option2": "(A−B)∪(B−A)",
+      "option3": "(A∪B)−(A∩B)",
+      "option4": "None of these",
+      "answer": 2
+    }
+  ]
+}
