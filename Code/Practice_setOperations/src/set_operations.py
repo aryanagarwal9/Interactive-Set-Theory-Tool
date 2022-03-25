@@ -55,7 +55,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.mainMenu_button.clicked.connect(self.mainMenu_pressed)
 
     def mainMenu_pressed(self):
-        import Code.Main_Screen.MainScreen as Main
+        import Code.Practice_homepage.selectPracticeQn as Main
         self.window = Main.MainWindow()
         self.window.show()
         self.hide()

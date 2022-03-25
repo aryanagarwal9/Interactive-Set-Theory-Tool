@@ -77,4 +77,4 @@ class Ui_MainWindow(object):
         self.TeacherSheets.setText(_translate("MainWindow", "Load Teacher Exercises"))
         self.SetLaws.setText(_translate("MainWindow", "Practice Set Laws"))
         self.VennDiagrams.setText(_translate("MainWindow", "Shade Venn Diagrams"))
-        self.HomeButton.setText(_translate("MainWindow", "Main Menu"))
+        self.HomeButton.setText(_translate("MainWindow", "Home"))

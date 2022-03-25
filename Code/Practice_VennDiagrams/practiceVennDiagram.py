@@ -68,7 +68,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.Area7.stateChanged.connect(lambda: self.shadeArea_3sets(self.Area7))
 
     def mainMenu_pressed(self):
-        import Code.Main_Screen.MainScreen as Main
+        import Code.Practice_homepage.selectPracticeQn as Main
         self.window = Main.MainWindow()
         self.window.show()
         self.hide()

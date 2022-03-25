@@ -33,7 +33,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.main_menu_button.clicked.connect(self.redirect_mainMenu)
 
     def redirect_mainMenu(self):
-        import Code.Main_Screen.MainScreen as Main
+        import Code.Practice_homepage.selectPracticeQn as Main
         self.window = Main.MainWindow()
         self.window.show()
         self.hide()
